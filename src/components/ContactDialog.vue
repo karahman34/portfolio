@@ -9,7 +9,7 @@
       </div>
 
       <div
-        class="flex items-center justify-around flex-col gap-6 md:gap-0 md:flex-row"
+        class="flex items-center justify-around flex-col gap-5 md:gap-0 md:flex-row"
       >
         <!-- List of contacts -->
         <div
@@ -18,10 +18,12 @@
           class="flex flex-col"
         >
           <span
-            class="text-8xl text-gray-800 text-center"
+            class="text-6xl text-gray-800 text-center lg:text-8xl"
             :class="contact.icon"
           ></span>
-          <span class="mt-1 text-xl text-gray-800">{{ contact.text }}</span>
+          <span class="text-lg text-gray-800 lg:text-xl">{{
+            contact.text
+          }}</span>
         </div>
       </div>
     </div>

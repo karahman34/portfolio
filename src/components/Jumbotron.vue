@@ -27,7 +27,7 @@
             class="dialog-trigger py-1 px-4 bg-green-500 rounded uppercase text-base font-mono font-medium  focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-60 sm:text-lg lg:text-xl"
             data-aos="zoom-in"
             data-aos-once="true"
-            data-aos-delay="100"
+            data-aos-delay="500"
             @click="emitShowContactEvent"
           >
             Contact Me
@@ -90,8 +90,8 @@ export default {
   @media screen and (max-width: 640px) {
     & {
       .greet {
-        font-size: 1.48rem;
-        line-height: 1.75rem;
+        font-size: 1.5rem;
+        line-height: 2rem;
       }
 
       .role {
