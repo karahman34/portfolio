@@ -1,7 +1,7 @@
 <template>
   <div
     id="nav"
-    class="w-full z-40 py-3 text-white bg-transparent font-mono"
+    class="w-full z-40 py-3 text-white bg-transparent font-mono flex items-center"
     :class="{
       'nav-bg': showNavBg
     }"
@@ -9,13 +9,11 @@
     <!-- Menus -->
     <div class="container flex justify-between items-center">
       <!-- Left -->
-      <div class="pt-1">
-        <span
-          class="block cursor-pointer uppercase text-2xl leading-none font-semibold"
-          @click="scrollToElement('#jumbotron')"
-        >
-          My Portfolio
-        </span>
+      <div
+        class="cursor-pointer uppercase text-2xl leading-none font-semibold"
+        @click="scrollToElement('#jumbotron')"
+      >
+        My Portfolio
       </div>
 
       <!-- Right -->
