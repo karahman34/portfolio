@@ -21,7 +21,11 @@
             @click="emitShowScreenshotsEvent(project.images)"
           >
             <!-- Screenshot -->
-            <img class="object-cover min-w-full" :src="project.images[0]" />
+            <img
+              class="object-cover"
+              :src="project.images[0]"
+              style="min-height: 180px"
+            />
 
             <div class="px-5 py-2">
               <!-- Tags -->
