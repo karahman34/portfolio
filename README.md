@@ -1,5 +1,8 @@
 # portfolio
 
+## Live
+https://karahman34-portfolio.herokuapp.com/
+
 ## Project setup
 ```
 yarn install
