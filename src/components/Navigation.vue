@@ -10,10 +10,14 @@
     <div class="container flex justify-between items-center">
       <!-- Left -->
       <div
-        class="cursor-pointer uppercase text-2xl leading-none font-semibold"
+        class="cursor-pointer flex items-center"
         @click="scrollToElement('#jumbotron')"
       >
-        My Portfolio
+        <img src="/images/logo.png" class="logo" alt="Logo" />
+        <span
+          class="uppercase text-xl ml-1 font-medium md:font-semibold md:text-2xl md:ml-2"
+          >My Portfolio</span
+        >
       </div>
 
       <!-- Right -->
@@ -143,6 +147,16 @@ export default {
   @media screen and (min-width: 768px) {
     & {
       height: 65px;
+    }
+  }
+
+  .logo {
+    height: 2.8rem;
+
+    @media screen and (min-width: 1024px) {
+      & {
+        height: 3.3rem;
+      }
     }
   }
 }
