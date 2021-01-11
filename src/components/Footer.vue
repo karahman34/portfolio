@@ -1,6 +1,6 @@
 <template>
   <footer id="app-footer" class="background-particles">
-    <div class="container text-center text-white font-medium">
+    <div class="container text-center text-white font-base">
       Jaka Rahman Hidayat | &copy; 2021 All Right Reserved
     </div>
   </footer>
