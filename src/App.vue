@@ -65,6 +65,10 @@ export default {
     }
   },
 
+  mounted() {
+    document.title = 'Portfolio'
+  },
+
   methods: {
     toggleScreenshotDialog(images = null) {
       this.screenshotDialog = !this.screenshotDialog
