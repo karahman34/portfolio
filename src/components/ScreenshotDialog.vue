@@ -1,11 +1,7 @@
 <template>
   <the-dialog @hide="$emit('hide')">
     <!-- Active Image -->
-    <img
-      class="active-image object-contain h-auto"
-      :src="activeImage"
-      alt="Project Screenshot"
-    />
+    <img class="active-image" :src="activeImage" alt="Project Screenshot" />
 
     <!-- List of screenshots -->
     <div
@@ -58,15 +54,15 @@ export default {
 
 <style lang="scss" scoped>
 .active-image {
-  max-width: 97%;
+  object-fit: contain;
+  width: 95%;
+  height: auto;
 }
 
-.active-image {
-  @media screen and (min-width: 1024px) {
-    & {
-      width: 70%;
-      height: 70%;
-    }
+@media screen and (min-width: 1024px) {
+  .active-image {
+    width: 70%;
+    height: 70%;
   }
 }
 
@@ -76,7 +72,7 @@ export default {
 }
 
 .active-indicator {
-  margin-top: 10px;
+  margin-top: 5px;
   height: 4px;
   background-color: var(--primary-color);
 }
