@@ -17,14 +17,14 @@
         >
           <!-- Card -->
           <div
-            class="dialog-trigger project-item bg-white cursor-pointer overflow-hidden"
+            class="dialog-trigger project-item bg-white rounded-b cursor-pointer overflow-hidden"
             @click="emitShowScreenshotsEvent(project.images)"
           >
             <!-- Screenshot -->
             <img
-              class="object-cover"
+              class="object-cover w-full"
               :src="project.images[0]"
-              style="min-height: 180px"
+              style="min-height: 200px; max-height: 220px;"
             />
 
             <div class="px-5 py-2">
@@ -146,6 +146,11 @@ export default {
           '/projects/table-service/five.png',
           '/projects/table-service/six.png'
         ]
+      },
+      {
+        title: 'Company Landing Page',
+        tags: ['bootstrap'],
+        images: ['/projects/company-landing-page/one.png']
       }
     ].sort(() => Math.random() - 0.5)
   },
