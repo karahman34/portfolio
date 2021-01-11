@@ -9,7 +9,7 @@
         data-aos="fade-right"
         data-aos-delay="100"
         data-aos-once="true"
-        data-aos-duration="850"
+        data-aos-duration="600"
       >
         <div class="header-context">About Me</div>
 
@@ -32,7 +32,7 @@
         data-aos="fade-left"
         data-aos-delay="100"
         data-aos-once="true"
-        data-aos-duration="850"
+        data-aos-duration="600"
       >
         <div class="header-context">Education</div>
 

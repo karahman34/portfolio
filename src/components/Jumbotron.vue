@@ -27,7 +27,7 @@
             class="dialog-trigger py-1 px-4 bg-green-500 rounded uppercase text-base font-mono font-medium  focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-60 sm:text-lg lg:text-xl"
             data-aos="zoom-in"
             data-aos-once="true"
-            data-aos-delay="500"
+            data-aos-delay="350"
             @click="emitShowContactEvent"
           >
             Contact Me
