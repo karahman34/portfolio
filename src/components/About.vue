@@ -1,7 +1,7 @@
 <template>
   <div id="about" class="background-gray py-6">
     <div
-      class="container flex items-center flex-col gap-5 lg:flex-row lg:justify-center lg:items-start"
+      class="container overflow-x-hidden flex items-center flex-col gap-5 md:overflow-x-visible lg:flex-row lg:justify-center lg:items-start"
     >
       <!-- About Me -->
       <div
