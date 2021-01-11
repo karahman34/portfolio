@@ -86,8 +86,8 @@ export default {
   min-height: 100vh;
 
   .container {
-    margin: 0 auto !important;
-    width: 90% !important;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .background-particles {
