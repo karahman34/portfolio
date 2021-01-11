@@ -34,11 +34,19 @@
       </div>
 
       <!-- Right - Mobile -->
-      <div class="cursor-pointer relative block md:hidden">
-        <!-- Trigger -->
+      <div class="mobile-menu cursor-pointer relative block md:hidden">
+        <!-- Trigger On -->
         <span
-          class="mobile-menu-trigger mdi mdi-menu text-2xl"
-          @click="mobileNav = !mobileNav"
+          class="mobile-menu-trigger mdi mdi-menu"
+          :class="{ 'is-hidden': mobileNav }"
+          @click="mobileNav = true"
+        ></span>
+
+        <!-- Trigger Off -->
+        <span
+          class="mobile-menu-trigger mdi mdi-close"
+          :class="{ 'is-hidden': !mobileNav }"
+          @click="mobileNav = false"
         ></span>
 
         <!-- Menus Container -->
@@ -104,7 +112,7 @@ export default {
     clickOutsideHandler(e) {
       if (this.mobileNav) {
         const exluded = [
-          document.querySelector('.mobile-menu-trigger'),
+          ...document.querySelectorAll('.mobile-menu-trigger'),
           document.querySelector('.mobile-menu-container')
         ]
 
@@ -140,6 +148,7 @@ export default {
 
 <style lang="scss" scoped>
 #nav {
+  -webkit-tap-highlight-color: transparent;
   height: 58px;
   position: fixed;
   top: 0;
@@ -151,7 +160,7 @@ export default {
   }
 
   .logo {
-    height: 2.8rem;
+    height: 2.5rem;
 
     @media screen and (min-width: 1024px) {
       & {
@@ -159,19 +168,35 @@ export default {
       }
     }
   }
+
+  .mobile-menu {
+    .mobile-menu-trigger {
+      display: inline-block;
+      padding-top: 6px !important;
+      opacity: 1;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      transition: opacity 250ms linear, font-size 0ms linear 250ms;
+    }
+
+    .mobile-menu-trigger.is-hidden {
+      opacity: 0;
+      font-size: 0rem;
+    }
+
+    .mobile-menu-container {
+      box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+      transform: scale(1);
+      transition: transform 300ms;
+    }
+
+    .mobile-menu-container.is-hidden {
+      transform: scale(0);
+    }
+  }
 }
 
 .nav-bg {
   background-color: rgb(35, 39, 65);
-}
-
-.mobile-menu-container {
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  transform: scale(1);
-  transition: transform 300ms;
-}
-
-.mobile-menu-container.is-hidden {
-  transform: scale(0);
 }
 </style>
