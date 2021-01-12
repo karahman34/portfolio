@@ -61,7 +61,7 @@ export default {
   height: 130px;
   border-radius: 50%;
   object-fit: cover;
-  filter: grayscale(60%);
+  filter: grayscale(55%);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
   @media screen and (min-width: 640px) {
