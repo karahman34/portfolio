@@ -172,7 +172,7 @@ export default {
   .mobile-menu {
     .mobile-menu-trigger {
       display: inline-block;
-      padding-top: 6px !important;
+      padding-top: 5px;
       opacity: 1;
       font-size: 1.5rem;
       line-height: 1.5rem;
