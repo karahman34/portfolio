@@ -24,7 +24,7 @@
             <img
               class="object-cover w-full"
               :src="project.images[0]"
-              style="min-height: 200px; max-height: 220px;"
+              style="min-height: 200px; max-height: 220px"
             />
 
             <div class="px-5 py-2">
@@ -124,7 +124,9 @@ export default {
           '/projects/quiz/two.png',
           '/projects/quiz/three.png',
           '/projects/quiz/four.png',
-          '/projects/quiz/five.png'
+          '/projects/quiz/five.png',
+          '/projects/quiz/six.png',
+          '/projects/quiz/seven.png'
         ]
       },
       {
