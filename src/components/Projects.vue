@@ -50,7 +50,7 @@
       <div class="w-max mt-6 mb-1 mx-auto cursor-pointer">
         <button
           v-if="nextPage"
-          class="cursor-pointer rounded py-1 cursor-pointer px-4 bg-green-500 font-medium text-lg text-white focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 lg:py-2 lg:text-xl"
+          class="rounded py-1 px-4 bg-green-500 font-mono font-medium text-lg text-white uppercase focus:ring-4 focus:ring-green-500 focus:ring-opacity-50"
           @click="page += 1"
         >
           Load More
