@@ -13,7 +13,8 @@
           data-aos-delay="200"
         >
           <span
-            :class="[skill.icon, 'text-gray-400 text-6xl md:text-8xl']"
+            class="text-gray-400 text-6xl md:text-8xl"
+            :class="skill.icon"
           ></span>
           <p class="mb-0 font-medium font-mono text-lg md:text-xl">
             {{ skill.text }}
@@ -72,6 +73,10 @@ export default {
         {
           icon: 'mdi mdi-tailwind hover:text-blue-400',
           text: 'Tailwind'
+        },
+        {
+          icon: 'mdi mdi-nodejs hover:text-green-500',
+          text: 'Node JS'
         }
       ]
     }
