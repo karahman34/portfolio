@@ -153,6 +153,21 @@ export default {
         title: 'Company Landing Page',
         tags: ['bootstrap'],
         images: ['/projects/company-landing-page/one.png']
+      },
+      {
+        title: 'News',
+        tags: ['laravel', 'jquery', 'bootstrap', 'livewire'],
+        images: [
+          '/projects/news/one.png',
+          '/projects/news/two.png',
+          '/projects/news/three.png',
+          '/projects/news/four.png',
+          '/projects/news/five.png',
+          '/projects/news/six.png',
+          '/projects/news/seven.png',
+          '/projects/news/eight.png',
+          '/projects/news/nine.png'
+        ]
       }
     ].sort(() => Math.random() - 0.5)
   },
