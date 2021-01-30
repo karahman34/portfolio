@@ -1,16 +1,12 @@
 <template>
   <div id="app">
     <!-- Contact Dialog -->
-    <contact-dialog
-      v-if="showContactDialog"
-      @hide="showContactDialog = false"
-    ></contact-dialog>
+    <contact-dialog v-model="showContactDialog"></contact-dialog>
 
     <!-- Screenshot Dialog -->
     <screenshot-dialog
-      v-if="screenshotDialog"
+      v-model="screenshotDialog"
       :images="projectScreenshots"
-      @hide="toggleScreenshotDialog"
     ></screenshot-dialog>
 
     <!-- The navigation -->
@@ -23,7 +19,7 @@
     <about></about>
 
     <!-- The Projects -->
-    <projects @show-screenshots="toggleScreenshotDialog"></projects>
+    <projects @show-screenshots="showScreenshotDialog"></projects>
 
     <!-- The Skills -->
     <skills></skills>
@@ -61,7 +57,7 @@ export default {
     return {
       showContactDialog: false,
       screenshotDialog: false,
-      projectScreenshots: null
+      projectScreenshots: []
     }
   },
 
@@ -69,9 +65,17 @@ export default {
     document.title = 'Portfolio'
   },
 
+  watch: {
+    screenshotDialog(val) {
+      if (!val) {
+        this.projectScreenshots = []
+      }
+    }
+  },
+
   methods: {
-    toggleScreenshotDialog(images = null) {
-      this.screenshotDialog = !this.screenshotDialog
+    showScreenshotDialog(images) {
+      this.screenshotDialog = true
       this.projectScreenshots = images
     }
   }

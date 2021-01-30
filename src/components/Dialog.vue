@@ -1,16 +1,13 @@
 <template>
-  <div class="modal fixed top-0 left-0 z-50 w-screen h-screen">
-    <!-- Background -->
-    <div
-      class="modal-background fixed top-0 left-0 h-full w-full bg-gray-800 bg-opacity-75"
-      @click="emitHideEvent"
-    ></div>
-
+  <div
+    class="dialog fixed top-0 left-0 z-50 w-screen h-screen bg-gray-800 bg-opacity-75"
+    :class="{ hidden: !value }"
+  >
     <!-- Content -->
     <div
-      ref="modalContent"
-      class="modal-content fixed w-full h-full px-3 py-3 flex items-center justify-center"
+      class="dialog-content fixed w-full h-full px-3 py-3 flex items-center justify-center z-50"
     >
+      <!-- Slot -->
       <slot></slot>
     </div>
   </div>
@@ -18,41 +15,62 @@
 
 <script>
 export default {
-  mounted() {
-    document.addEventListener('click', this.clickOutsideHandler)
+  props: {
+    value: {
+      type: Boolean,
+      default: true
+    }
+  },
+
+  watch: {
+    value: {
+      immediate: true,
+      handler(val) {
+        this.toggleBackgroundScroll()
+
+        val === true ? this.listenClick() : this.removeListenClick()
+      }
+    }
   },
 
   methods: {
-    emitHideEvent() {
-      return this.$emit('hide')
+    emitInputEvent(val) {
+      this.$emit('input', val)
     },
-    clickOutsideHandler(e) {
-      const dialogTrigger = document.querySelectorAll('.dialog-trigger')
-      const excluded = [
-        ...dialogTrigger,
-        ...this.$refs.modalContent.querySelectorAll('*')
-      ]
+    toggleBackgroundScroll() {
+      const body = document.body
+      const previousBodyHeight = body.style.height
+      const paddingValue = window.innerWidth >= 768 ? 18 : 0
 
-      for (let i = 0; i < dialogTrigger.length; i++) {
-        const el = dialogTrigger[i]
-        excluded.push(...el.querySelectorAll('*'))
+      if (this.value) {
+        body.style.height = '100vh'
+        body.style.overflowY = 'hidden'
+        body.style.paddingRight = paddingValue + 'px'
+      } else {
+        body.style.height = previousBodyHeight
+        body.style.overflowY = 'visible'
+        body.style.paddingRight = null
       }
-
+    },
+    clickHandler(e) {
       const target = e.target
-      for (let i = 0; i < excluded.length; i++) {
-        const el = excluded[i]
-
-        if (el.isSameNode(target)) {
-          return false
+      if (target.classList.contains('dialog-content')) {
+        const targetDialog = target.closest('.dialog')
+        if (this.$el.isSameNode(targetDialog)) {
+          this.emitInputEvent(false)
         }
       }
-
-      this.emitHideEvent()
+    },
+    listenClick() {
+      document.addEventListener('click', this.clickHandler)
+    },
+    removeListenClick() {
+      document.removeEventListener('click', this.clickHandler)
     }
   },
 
   beforeDestroy() {
-    document.removeEventListener('click', this.clickOutsideHandler)
+    this.removeListenClick()
   }
 }
 </script>

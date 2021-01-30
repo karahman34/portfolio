@@ -1,5 +1,5 @@
 <template>
-  <the-dialog @hide="$emit('hide')">
+  <the-dialog v-model="dialog">
     <div class="bg-white rounded px-6 py-6 w-full lg:w-1/2 xl:3/12">
       <!-- Header -->
       <div
@@ -38,6 +38,13 @@ export default {
     TheDialog
   },
 
+  props: {
+    value: {
+      type: Boolean,
+      required: true
+    }
+  },
+
   data() {
     return {
       contacts: [
@@ -53,7 +60,19 @@ export default {
           icon: 'mdi mdi-github',
           text: 'github.com/karahman34'
         }
-      ]
+      ],
+      dialog: false
+    }
+  },
+
+  watch: {
+    value(val) {
+      this.dialog = val
+    },
+    dialog(val) {
+      if (!val) {
+        this.$emit('input', false)
+      }
     }
   }
 }

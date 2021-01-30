@@ -1,5 +1,5 @@
 <template>
-  <the-dialog @hide="$emit('hide')">
+  <the-dialog v-model="dialog">
     <!-- Active Image -->
     <img class="active-image" :src="activeImage" alt="Project Screenshot" />
 
@@ -32,6 +32,10 @@ export default {
   },
 
   props: {
+    value: {
+      type: Boolean,
+      required: true
+    },
     images: {
       type: Array,
       required: true
@@ -40,13 +44,26 @@ export default {
 
   data() {
     return {
-      activeIndex: 0
+      activeIndex: 0,
+      dialog: false
     }
   },
 
   computed: {
     activeImage() {
       return this.images[this.activeIndex]
+    }
+  },
+
+  watch: {
+    value(val) {
+      this.dialog = val
+    },
+    dialog(val) {
+      if (!val) {
+        this.activeIndex = 0
+        this.$emit('input', false)
+      }
     }
   }
 }
