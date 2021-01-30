@@ -59,6 +59,10 @@ export default {
           text: 'Vue'
         },
         {
+          icon: 'mdi mdi-jquery hover:text-blue-500',
+          text: 'Jquery'
+        },
+        {
           icon: 'mdi mdi-vuetify hover:text-blue-400',
           text: 'Vuetify'
         },
