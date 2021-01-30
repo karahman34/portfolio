@@ -13,7 +13,7 @@
           data-aos-delay="200"
         >
           <span
-            class="text-gray-400 text-6xl md:text-8xl"
+            class="text-gray-400 text-6xl transition-colors md:text-8xl"
             :class="skill.icon"
           ></span>
           <p class="mb-0 font-medium font-mono text-lg md:text-xl">

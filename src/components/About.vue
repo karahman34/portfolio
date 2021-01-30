@@ -57,8 +57,8 @@ export default {
 
 <style lang="scss" scoped>
 .avatar {
-  width: 130px;
-  height: 130px;
+  width: 135px;
+  height: 135px;
   border-radius: 50%;
   object-fit: cover;
   filter: grayscale(55%);
@@ -66,8 +66,8 @@ export default {
 
   @media screen and (min-width: 640px) {
     & {
-      width: 170px;
-      height: 170px;
+      width: 160px;
+      height: 160px;
     }
   }
 }

@@ -26,10 +26,10 @@
         <div
           v-for="menu in menus"
           :key="menu.text"
-          class="font-medium cursor-pointer uppercase"
+          class="cursor-pointer uppercase"
           @click="scrollToElement(menu.selector)"
         >
-          <div>{{ menu.text }}</div>
+          <div class="tracking-widest">{{ menu.text }}</div>
         </div>
       </div>
 
@@ -58,7 +58,7 @@
           <div
             v-for="menu in menus"
             :key="menu.text"
-            class="py-1 px-3 text-gray-800 hover:bg-gray-300"
+            class="py-1 px-3 text-lg text-gray-800 hover:bg-gray-300"
             @click="scrollToElement(menu.selector)"
           >
             {{ menu.text }}

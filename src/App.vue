@@ -83,10 +83,15 @@ export default {
 </script>
 
 <style lang="scss">
+// Font Mono
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap');
+// Font Sans Serif
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+
 #app {
   --primary-color: rgb(16, 185, 129);
 
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgb(31, 41, 45);
@@ -96,6 +101,10 @@ export default {
   .container {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .font-mono {
+    font-family: 'Inconsolata', monospace !important;
   }
 
   .background-particles {
@@ -123,16 +132,21 @@ export default {
 
     width: max-content;
     margin: 0 auto;
-    font-weight: 600;
-    font-size: 25px;
     margin-bottom: 1.3rem;
+    font-weight: 600;
+    font-size: 24px;
     color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
 
     &::after {
       content: '';
       display: block;
       height: 4px;
       background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 22px;
     }
   }
 }

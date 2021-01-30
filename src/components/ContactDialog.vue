@@ -3,9 +3,9 @@
     <div class="bg-white rounded px-6 py-6 w-full lg:w-1/2 xl:3/12">
       <!-- Header -->
       <div
-        class="mb-4 mx-auto w-max text-3xl font-mono text-gray-800 text-center header-text"
+        class="mb-4 mx-auto uppercase w-max font-semibold text-2xl text-gray-800 header-text tracking-wider"
       >
-        Contact
+        contact
       </div>
 
       <div
@@ -18,10 +18,10 @@
           class="flex flex-col"
         >
           <span
-            class="text-6xl text-gray-800 text-center lg:text-8xl"
+            class="text-6xl text-gray-800 text-center lg:text-7xl"
             :class="contact.icon"
           ></span>
-          <span class="text-lg text-gray-800 lg:text-xl">{{
+          <span class="text-base text-gray-800 2xl:text-lg">{{
             contact.text
           }}</span>
         </div>

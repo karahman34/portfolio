@@ -1,7 +1,7 @@
 <template>
   <div id="projects" class="z-10 background-particles">
     <div class="container">
-      <div class="header-context">MY PROJECTS</div>
+      <div class="header-context">my projects</div>
 
       <!-- List of projects -->
       <div
@@ -50,7 +50,7 @@
       <div class="w-max mt-6 mb-1 mx-auto cursor-pointer">
         <button
           v-if="nextPage"
-          class="rounded py-1 px-4 bg-green-500 font-mono font-medium text-lg text-white uppercase focus:ring-4 focus:ring-green-500 focus:ring-opacity-50"
+          class="rounded py-1 px-4 bg-green-500 font-mono font-medium text-lg text-white uppercase focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50"
           @click="page += 1"
         >
           Load More

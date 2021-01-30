@@ -16,7 +16,7 @@
 
           <!-- Role -->
           <div
-            class="role uppercase font-mono text-xl md:text-2xl lg:text-3xl lg:my-2"
+            class="role uppercase font-mono text-xl md:text-2xl lg:text-3xl md:my-1"
           >
             a full stack web developer.
           </div>
@@ -24,7 +24,7 @@
           <!-- Contact Me -->
           <button
             v-if="showContactBtn"
-            class="dialog-trigger py-1 px-4 bg-green-500 rounded uppercase text-base font-mono font-medium  focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-60 sm:text-lg lg:text-xl"
+            class="dialog-trigger py-1 px-4 bg-green-500 rounded uppercase text-lg font-mono font-medium focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 lg:text-xl"
             data-aos="zoom-in"
             data-aos-once="true"
             data-aos-delay="350"
@@ -84,20 +84,12 @@ export default {
 
 <style lang="scss" scoped>
 #jumbotron {
-  height: 44vh;
+  height: 40vh;
   width: 100%;
 
-  @media screen and (max-width: 640px) {
+  @media screen and (min-width: 768px) {
     & {
-      .greet {
-        font-size: 1.5rem;
-        line-height: 2rem;
-      }
-
-      .role {
-        font-size: 1.125rem;
-        line-height: 1.75rem;
-      }
+      height: 44vh;
     }
   }
 
