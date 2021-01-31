@@ -1,0 +1,67 @@
+// Font Mono
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500&display=swap");
+// Font Sans Serif
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap");
+
+#app {
+  --primary-color: rgb(16, 185, 129);
+
+  font-family: "Nunito Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(31, 41, 45);
+  width: 100%;
+  min-height: 100vh;
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .font-mono {
+    font-family: "Inconsolata", monospace !important;
+  }
+
+  .background-particles {
+    position: relative;
+    padding: 1.5rem 0;
+    background-color: transparent;
+  }
+
+  .background-gray {
+    background-color: #f3f3f3;
+  }
+
+  .particles-js-canvas-el {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgb(35, 39, 65);
+  }
+
+  .header-context {
+    @apply font-mono;
+
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 1.3rem;
+    font-weight: 600;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.8);
+    text-transform: uppercase;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 22px;
+    }
+  }
+}
