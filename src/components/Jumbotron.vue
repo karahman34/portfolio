@@ -24,6 +24,7 @@
           <!-- Contact Me -->
           <button
             v-if="showContactBtn"
+            ref="showContactBtn"
             class="dialog-trigger py-1 px-4 bg-green-500 rounded uppercase text-lg font-mono font-medium focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 lg:text-xl hover:bg-green-600"
             data-aos="zoom-in"
             data-aos-once="true"
@@ -68,7 +69,11 @@ export default {
           strings: [roleText],
           typeSpeed: 38,
           showCursor: false,
-          onComplete: () => (this.showContactBtn = true)
+          onComplete: () => {
+            this.showContactBtn = true
+
+            this.$nextTick(() => this.playBounceAnimation())
+          }
         })
       }
     })
@@ -77,6 +82,18 @@ export default {
   methods: {
     emitShowContactEvent() {
       return this.$emit('show-contact')
+    },
+    playBounceAnimation() {
+      setTimeout(() => {
+        this.$refs.showContactBtn.classList.add('animate-bounce')
+
+        this.$nextTick(() =>
+          setTimeout(() => {
+            this.$refs.showContactBtn.classList.remove('animate-bounce')
+            this.playBounceAnimation()
+          }, 10000)
+        )
+      }, 5000)
     }
   }
 }
@@ -98,5 +115,9 @@ export default {
       height: 58vh;
     }
   }
+}
+
+.animate-bounce:hover {
+  animation: none;
 }
 </style>
