@@ -16,7 +16,7 @@
 
           <!-- Role -->
           <div
-            class="role uppercase font-mono text-xl md:text-2xl lg:text-3xl md:my-1"
+            class="role uppercase font-mono text-xl mb-1 md:text-2xl lg:text-3xl md:my-1"
           >
             a full stack web developer.
           </div>
