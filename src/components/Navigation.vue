@@ -26,7 +26,7 @@
         <div
           v-for="menu in menus"
           :key="menu.text"
-          class="cursor-pointer uppercase"
+          class="cursor-pointer uppercase menu-item"
           @click="scrollToElement(menu.selector)"
         >
           <div class="tracking-widest">{{ menu.text }}</div>
@@ -167,6 +167,11 @@ export default {
         height: 3.3rem;
       }
     }
+  }
+
+  .menu-item:hover {
+    margin-top: 3px;
+    border-bottom: 3px solid var(--primary-color);
   }
 
   .mobile-menu {

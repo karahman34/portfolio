@@ -24,7 +24,7 @@
           <!-- Contact Me -->
           <button
             v-if="showContactBtn"
-            class="dialog-trigger py-1 px-4 bg-green-500 rounded uppercase text-lg font-mono font-medium focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 lg:text-xl"
+            class="dialog-trigger py-1 px-4 bg-green-500 rounded uppercase text-lg font-mono font-medium focus:outline-none focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 lg:text-xl hover:bg-green-600"
             data-aos="zoom-in"
             data-aos-once="true"
             data-aos-delay="350"
