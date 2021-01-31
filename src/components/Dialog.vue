@@ -39,7 +39,6 @@ export default {
     },
     toggleBackgroundScroll() {
       const body = document.body
-      const previousBodyHeight = body.style.height
       const paddingValue = window.innerWidth >= 768 ? 18 : 0
 
       if (this.value) {
@@ -47,7 +46,7 @@ export default {
         body.style.overflowY = 'hidden'
         body.style.paddingRight = paddingValue + 'px'
       } else {
-        body.style.height = previousBodyHeight
+        body.style.height = 'auto'
         body.style.overflowY = 'visible'
         body.style.paddingRight = null
       }
