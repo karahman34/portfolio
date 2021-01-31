@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="text-gray-800">
     <!-- Contact Dialog -->
     <contact-dialog v-model="showContactDialog"></contact-dialog>
 

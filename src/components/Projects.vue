@@ -11,20 +11,19 @@
         <div
           v-for="project in paginatedItems"
           :key="project.title"
-          class="col-span-12 md:col-span-6 lg:col-span-4"
+          class="project col-span-12 md:col-span-6 lg:col-span-4"
           data-aos="zoom-in"
           data-aos-once="true"
         >
           <!-- Card -->
           <div
-            class="dialog-trigger project-item bg-white rounded-b cursor-pointer overflow-hidden"
-            @click="emitShowScreenshotsEvent(project.images)"
+            class="dialog-trigger project-card bg-white rounded-b overflow-hidden"
           >
             <!-- Screenshot -->
             <img
-              class="object-cover w-full"
+              class="screenshot object-cover w-full cursor-pointer"
               :src="project.images[0]"
-              style="min-height: 200px; max-height: 220px"
+              @click="emitShowScreenshotsEvent(project.images)"
             />
 
             <div class="px-5 py-2">
@@ -33,14 +32,32 @@
                 <div
                   v-for="tag in project.tags"
                   :key="tag"
-                  class="bg-gray-200 px-2 rounded text-gray-700"
+                  class="bg-gray-200 px-2 rounded text-gray-600"
                 >
                   {{ tag }}
                 </div>
               </div>
 
-              <!-- Title -->
-              <div class="text-lg font-semibold">{{ project.title }}</div>
+              <div class="flex justify-between items-center">
+                <!-- Title -->
+                <div
+                  class="text-lg font-semibold cursor-pointer"
+                  @click="emitShowScreenshotsEvent(project.images)"
+                >
+                  {{ project.title }}
+                </div>
+
+                <!-- Link -->
+                <span class="link flex items-center space-x-1">
+                  <i class="mdi mdi-github mdi-24px"></i>
+                  <a
+                    :href="project.link"
+                    class="hover:underline"
+                    target="_blank"
+                    >Repository</a
+                  >
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -75,6 +92,7 @@ export default {
       {
         title: 'Vue Admin Template',
         tags: ['vue', 'tailwind'],
+        link: 'https://github.com/karahman34/vue-tailwind-admin',
         images: [
           '/projects/vtail-admin/one.png',
           '/projects/vtail-admin/two.png',
@@ -84,11 +102,13 @@ export default {
       {
         title: 'Calculator',
         tags: ['vue'],
+        link: 'https://github.com/karahman34/calculator',
         images: ['/projects/calculator/one.png', '/projects/calculator/two.png']
       },
       {
         title: 'Channel Chat',
         tags: ['laravel', 'vue', 'vuetify'],
+        link: 'https://github.com/karahman34/channel-chat-frontend',
         images: [
           '/projects/channel-chat/one.png',
           '/projects/channel-chat/two.png'
@@ -97,6 +117,7 @@ export default {
       {
         title: 'Marvel',
         tags: ['vue', 'vuetify'],
+        link: 'https://github.com/karahman34/marvel',
         images: [
           '/projects/marvel/one.png',
           '/projects/marvel/two.png',
@@ -108,6 +129,7 @@ export default {
       {
         title: 'Forum',
         tags: ['laravel', 'vue', 'bulma'],
+        link: 'https://github.com/karahman34/forum',
         images: [
           '/projects/forum/one.png',
           '/projects/forum/two.png',
@@ -119,6 +141,7 @@ export default {
       {
         title: 'Quiz App',
         tags: ['laravel', 'vue', 'tailwind'],
+        link: 'https://github.com/karahman34/quiz-app',
         images: [
           '/projects/quiz/one.png',
           '/projects/quiz/two.png',
@@ -132,6 +155,7 @@ export default {
       {
         title: 'Tic tac toe',
         tags: ['vue'],
+        link: 'https://github.com/karahman34/tic-tac-toe',
         images: [
           '/projects/tic-tac-toe/one.png',
           '/projects/tic-tac-toe/two.png'
@@ -140,6 +164,7 @@ export default {
       {
         title: 'Table Service',
         tags: ['laravel', 'vue', 'vuetify'],
+        link: 'https://github.com/karahman34/table-service-frontend',
         images: [
           '/projects/table-service/one.png',
           '/projects/table-service/two.png',
@@ -152,11 +177,13 @@ export default {
       {
         title: 'Company Landing Page',
         tags: ['bootstrap'],
+        link: 'https://github.com/karahman34/landing-pages',
         images: ['/projects/company-landing-page/one.png']
       },
       {
         title: 'News',
         tags: ['laravel', 'jquery', 'bootstrap', 'livewire'],
+        link: 'https://github.com/karahman34/laravel-news',
         images: [
           '/projects/news/one.png',
           '/projects/news/two.png',
@@ -222,11 +249,26 @@ export default {
     }
   }
 
-  .project-item {
+  .project-card {
     transition: transform 200ms ease-in;
 
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1.05);
+
+      .link {
+        max-width: 100%;
+      }
+    }
+
+    .screenshot {
+      min-height: 200px;
+      max-height: 220px;
+    }
+
+    .link {
+      overflow: hidden;
+      max-width: 22px;
+      transition: max-width 900ms linear;
     }
   }
 }
