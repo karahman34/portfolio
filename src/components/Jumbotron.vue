@@ -41,6 +41,7 @@
 
 <script>
 import Typed from 'typed.js'
+import ParticlesConfig from '@/assets/particles'
 
 export default {
   data() {
@@ -51,7 +52,7 @@ export default {
 
   mounted() {
     // Load particles
-    window.particlesJS.load('jumbotron', '/particles.json')
+    window.particlesJS('jumbotron', ParticlesConfig)
 
     // Load type js
     const greet = document.querySelector('#jumbotron .greet')

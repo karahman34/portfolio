@@ -7,10 +7,12 @@
 </template>
 
 <script>
+import ParticlesConfig from '@/assets/particles'
+
 export default {
   mounted() {
     // Load particles
-    window.particlesJS.load('app-footer', '/particles.json')
+    window.particlesJS('app-footer', ParticlesConfig)
   }
 }
 </script>

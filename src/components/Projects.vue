@@ -78,6 +78,8 @@
 </template>
 
 <script>
+import ParticlesConfig from '@/assets/particles'
+
 export default {
   data() {
     return {
@@ -233,7 +235,7 @@ export default {
 
   mounted() {
     // Load particles
-    window.particlesJS.load('projects', '/particles.json')
+    window.particlesJS('projects', ParticlesConfig)
   }
 }
 </script>
