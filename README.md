@@ -1,7 +1,7 @@
 # portfolio
 
 ## Live
-https://karahman34-portfolio.herokuapp.com/
+https://karahman34.github.io/portfolio/
 
 ## Project setup
 ```
