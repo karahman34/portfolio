@@ -14,7 +14,7 @@
         <div class="header-context">About Me</div>
 
         <!-- Avatar -->
-        <img class="avatar mx-auto" src="@/assets/avatar.jpeg" />
+        <img class="avatar mx-auto" src="@/assets/images/avatar.jpeg" />
 
         <!-- Greeting -->
         <div

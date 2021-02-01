@@ -13,7 +13,7 @@
         class="cursor-pointer flex items-center"
         @click="scrollToElement('#jumbotron')"
       >
-        <img src="/images/logo.png" class="logo" alt="Logo" />
+        <img src="@/assets/images/logo.png" class="logo" alt="Logo" />
         <span
           class="uppercase text-xl ml-1 font-medium md:font-semibold md:text-2xl md:ml-2"
           >My Portfolio</span

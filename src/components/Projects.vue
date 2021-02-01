@@ -94,24 +94,27 @@ export default {
         tags: ['vue', 'tailwind'],
         link: 'https://github.com/karahman34/vue-tailwind-admin',
         images: [
-          '/projects/vtail-admin/one.png',
-          '/projects/vtail-admin/two.png',
-          '/projects/vtail-admin/three.png'
+          require('@/assets/images/projects/vtail-admin/one.png'),
+          require('@/assets/images/projects/vtail-admin/two.png'),
+          require('@/assets/images/projects/vtail-admin/three.png')
         ]
       },
       {
         title: 'Calculator',
         tags: ['vue'],
         link: 'https://github.com/karahman34/calculator',
-        images: ['/projects/calculator/one.png', '/projects/calculator/two.png']
+        images: [
+          require('@/assets/images/projects/calculator/one.png'),
+          require('@/assets/images/projects/calculator/two.png')
+        ]
       },
       {
         title: 'Channel Chat',
         tags: ['laravel', 'vue', 'vuetify'],
         link: 'https://github.com/karahman34/channel-chat-frontend',
         images: [
-          '/projects/channel-chat/one.png',
-          '/projects/channel-chat/two.png'
+          require('@/assets/images/projects/channel-chat/one.png'),
+          require('@/assets/images/projects/channel-chat/two.png')
         ]
       },
       {
@@ -119,11 +122,11 @@ export default {
         tags: ['vue', 'vuetify'],
         link: 'https://github.com/karahman34/marvel',
         images: [
-          '/projects/marvel/one.png',
-          '/projects/marvel/two.png',
-          '/projects/marvel/three.png',
-          '/projects/marvel/four.png',
-          '/projects/marvel/five.png'
+          require('@/assets/images/projects/marvel/one.png'),
+          require('@/assets/images/projects/marvel/two.png'),
+          require('@/assets/images/projects/marvel/three.png'),
+          require('@/assets/images/projects/marvel/four.png'),
+          require('@/assets/images/projects/marvel/five.png')
         ]
       },
       {
@@ -131,11 +134,11 @@ export default {
         tags: ['laravel', 'vue', 'bulma'],
         link: 'https://github.com/karahman34/forum',
         images: [
-          '/projects/forum/one.png',
-          '/projects/forum/two.png',
-          '/projects/forum/three.png',
-          '/projects/forum/four.png',
-          '/projects/forum/five.png'
+          require('@/assets/images/projects/forum/one.png'),
+          require('@/assets/images/projects/forum/two.png'),
+          require('@/assets/images/projects/forum/three.png'),
+          require('@/assets/images/projects/forum/four.png'),
+          require('@/assets/images/projects/forum/five.png')
         ]
       },
       {
@@ -143,13 +146,13 @@ export default {
         tags: ['laravel', 'vue', 'tailwind'],
         link: 'https://github.com/karahman34/quiz-app',
         images: [
-          '/projects/quiz/one.png',
-          '/projects/quiz/two.png',
-          '/projects/quiz/three.png',
-          '/projects/quiz/four.png',
-          '/projects/quiz/five.png',
-          '/projects/quiz/six.png',
-          '/projects/quiz/seven.png'
+          require('@/assets/images/projects/quiz/one.png'),
+          require('@/assets/images/projects/quiz/two.png'),
+          require('@/assets/images/projects/quiz/three.png'),
+          require('@/assets/images/projects/quiz/four.png'),
+          require('@/assets/images/projects/quiz/five.png'),
+          require('@/assets/images/projects/quiz/six.png'),
+          require('@/assets/images/projects/quiz/seven.png')
         ]
       },
       {
@@ -157,8 +160,8 @@ export default {
         tags: ['vue'],
         link: 'https://github.com/karahman34/tic-tac-toe',
         images: [
-          '/projects/tic-tac-toe/one.png',
-          '/projects/tic-tac-toe/two.png'
+          require('@/assets/images/projects/tic-tac-toe/one.png'),
+          require('@/assets/images/projects/tic-tac-toe/two.png')
         ]
       },
       {
@@ -166,34 +169,36 @@ export default {
         tags: ['laravel', 'vue', 'vuetify'],
         link: 'https://github.com/karahman34/table-service-frontend',
         images: [
-          '/projects/table-service/one.png',
-          '/projects/table-service/two.png',
-          '/projects/table-service/three.png',
-          '/projects/table-service/four.png',
-          '/projects/table-service/five.png',
-          '/projects/table-service/six.png'
+          require('@/assets/images/projects/table-service/one.png'),
+          require('@/assets/images/projects/table-service/two.png'),
+          require('@/assets/images/projects/table-service/three.png'),
+          require('@/assets/images/projects/table-service/four.png'),
+          require('@/assets/images/projects/table-service/five.png'),
+          require('@/assets/images/projects/table-service/six.png')
         ]
       },
       {
         title: 'Company Landing Page',
         tags: ['bootstrap'],
         link: 'https://github.com/karahman34/landing-pages',
-        images: ['/projects/company-landing-page/one.png']
+        images: [
+          require('@/assets/images/projects/company-landing-page/one.png')
+        ]
       },
       {
         title: 'News',
         tags: ['laravel', 'jquery', 'bootstrap', 'livewire'],
         link: 'https://github.com/karahman34/laravel-news',
         images: [
-          '/projects/news/one.png',
-          '/projects/news/two.png',
-          '/projects/news/three.png',
-          '/projects/news/four.png',
-          '/projects/news/five.png',
-          '/projects/news/six.png',
-          '/projects/news/seven.png',
-          '/projects/news/eight.png',
-          '/projects/news/nine.png'
+          require('@/assets/images/projects/news/one.png'),
+          require('@/assets/images/projects/news/two.png'),
+          require('@/assets/images/projects/news/three.png'),
+          require('@/assets/images/projects/news/four.png'),
+          require('@/assets/images/projects/news/five.png'),
+          require('@/assets/images/projects/news/six.png'),
+          require('@/assets/images/projects/news/seven.png'),
+          require('@/assets/images/projects/news/eight.png'),
+          require('@/assets/images/projects/news/nine.png')
         ]
       }
     ].sort(() => Math.random() - 0.5)
