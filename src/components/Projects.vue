@@ -180,7 +180,7 @@ export default {
         ]
       },
       {
-        title: 'Company Landing Page',
+        title: 'Landing Pages',
         tags: ['bootstrap'],
         link: 'https://github.com/karahman34/landing-pages',
         images: [
