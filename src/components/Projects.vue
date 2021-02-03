@@ -92,9 +92,9 @@ export default {
   created() {
     this.projects = [
       {
-        title: 'Vue Admin Template',
+        title: 'Vue Simple Tailwind Admin',
         tags: ['vue', 'tailwind'],
-        link: 'https://github.com/karahman34/vue-tailwind-admin',
+        link: 'https://github.com/karahman34/vue-simple-tailwind-admin',
         images: [
           require('@/assets/images/projects/vtail-admin/one.png'),
           require('@/assets/images/projects/vtail-admin/two.png'),
