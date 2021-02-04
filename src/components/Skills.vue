@@ -59,6 +59,10 @@ export default {
           text: 'Vue'
         },
         {
+          icon: 'mdi mdi-sass hover:text-pink-500',
+          text: 'Sass'
+        },
+        {
           icon: 'mdi mdi-jquery hover:text-blue-500',
           text: 'Jquery'
         },
@@ -79,7 +83,7 @@ export default {
           text: 'Tailwind'
         },
         {
-          icon: 'mdi mdi-nodejs hover:text-green-500',
+          icon: 'mdi mdi-nodejs hover:text-green-400',
           text: 'Node JS'
         }
       ]
