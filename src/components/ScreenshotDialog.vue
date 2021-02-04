@@ -1,23 +1,24 @@
 <template>
-  <the-dialog v-model="dialog">
+  <the-dialog :value="value" @input="$emit('input', false)">
     <!-- Active Image -->
-    <img class="active-image" :src="activeImage" alt="Project Screenshot" />
+    <img
+      :src="activeImage"
+      :alt="activeImage"
+      class="active-image block w-max object-contain lg:mb-28 lg:max-w-5xl xl:max-w-6xl"
+    />
 
-    <!-- List of screenshots -->
+    <!-- List Another Images -->
     <div
-      class="container fixed bottom-4 pb-1 flex gap-x-2 overflow-x-auto md:pb-0 md:justify-center lg:gap-x-4"
+      class="list-image-content absolute bottom-4 flex items-center overflow-x-auto max-w-screen-sm md:max-w-screen-md lg:max-w-5xl xl:max-w-6xl md:bottom-8"
     >
-      <div v-for="(image, i) in images" :key="image" class="flex-shrink-0">
-        <!-- List Image -->
-        <img
-          :src="image"
-          class="list-image-item cursor-pointer object-cover"
-          alt="List Image"
-          @click="activeIndex = i"
-        />
-
-        <!-- Active Indicator -->
-        <div v-if="i === activeIndex" class="active-indicator"></div>
+      <div
+        v-for="(image, i) in images"
+        :key="i"
+        class="list-image-item flex-shrink-0 cursor-pointer inline-block px-2"
+        :class="{ active: i === activeIndex }"
+        @click="activeIndex = i"
+      >
+        <img :src="image" :alt="image" class="object-cover" />
       </div>
     </div>
   </the-dialog>
@@ -44,8 +45,7 @@ export default {
 
   data() {
     return {
-      activeIndex: 0,
-      dialog: false
+      activeIndex: 0
     }
   },
 
@@ -56,14 +56,8 @@ export default {
   },
 
   watch: {
-    value(val) {
-      this.dialog = val
-    },
-    dialog(val) {
-      if (!val) {
-        this.activeIndex = 0
-        this.$emit('input', false)
-      }
+    value() {
+      this.activeIndex = 0
     }
   }
 }
@@ -71,26 +65,51 @@ export default {
 
 <style lang="scss" scoped>
 .active-image {
-  object-fit: contain;
-  width: 95%;
-  height: auto;
+  max-height: 640px;
 }
 
-@media screen and (min-width: 1024px) {
-  .active-image {
-    width: 70%;
-    height: 70%;
+.list-image-content {
+  &::-webkit-scrollbar {
+    height: 8px;
   }
-}
 
-.list-image-item {
-  width: 100px;
-  height: 100px;
-}
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 
-.active-indicator {
-  margin-top: 5px;
-  height: 4px;
-  background-color: var(--primary-color);
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .list-image-item {
+    img {
+      width: 140px;
+      height: 100px;
+
+      @media screen and (min-width: 1024px) {
+        & {
+          width: 180px;
+          height: 120px;
+        }
+      }
+    }
+
+    &.active {
+      margin-bottom: calc(5px + 0.5rem);
+
+      &::before {
+        content: '';
+        display: block;
+        height: 5px;
+        width: 25%;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-bottom: 0.5rem;
+        background-color: var(--primary-color);
+      }
+    }
+  }
 }
 </style>

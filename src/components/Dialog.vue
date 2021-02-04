@@ -5,7 +5,7 @@
   >
     <!-- Content -->
     <div
-      class="dialog-content fixed w-full h-full px-3 py-3 flex items-center justify-center z-50"
+      class="dialog-content relative w-full h-full px-3 py-3 flex items-center justify-center"
     >
       <!-- Slot -->
       <slot></slot>
