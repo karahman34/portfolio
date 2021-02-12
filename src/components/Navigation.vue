@@ -27,7 +27,8 @@
           v-for="menu in menus"
           :key="menu.text"
           class="cursor-pointer uppercase menu-item"
-          @click="scrollToElement(menu.selector)"
+          :class="{ active: menu.active }"
+          @click="scrollToElement(menu)"
         >
           <div class="tracking-widest">{{ menu.text }}</div>
         </div>
@@ -59,7 +60,7 @@
             v-for="menu in menus"
             :key="menu.text"
             class="py-1 px-3 text-lg text-gray-800 hover:bg-gray-300"
-            @click="scrollToElement(menu.selector)"
+            @click="scrollToElement(menu)"
           >
             {{ menu.text }}
           </div>
@@ -76,19 +77,23 @@ export default {
       menus: [
         {
           text: 'Top',
-          selector: '#jumbotron'
+          selector: '#jumbotron',
+          active: false
         },
         {
           text: 'About',
-          selector: '#about'
+          selector: '#about',
+          active: false
         },
         {
           text: 'Projects',
-          selector: '#projects'
+          selector: '#projects',
+          active: false
         },
         {
           text: 'Skills',
-          selector: '#skills'
+          selector: '#skills',
+          active: false
         }
       ],
       showNavBg: false,
@@ -97,17 +102,41 @@ export default {
   },
 
   mounted() {
+    this.toggleNavActive()
+
     window.addEventListener('click', this.clickOutsideHandler)
     window.addEventListener('scroll', this.windowResizeHandler)
   },
 
   methods: {
-    windowResizeHandler() {
+    toggleNavBg() {
       const scrollY = window.scrollY
       const navHeight = this.$el.clientHeight
       const jumbotronHeight = document.querySelector('#jumbotron').clientHeight
 
       this.showNavBg = scrollY >= jumbotronHeight - navHeight
+    },
+    toggleNavActive() {
+      const currPosition = window.scrollY
+
+      for (const menu of this.menus) {
+        const el = document.querySelector(menu.selector)
+        const elOffset = el.offsetTop - this.$el.scrollHeight
+        const elHeight = elOffset + el.scrollHeight
+
+        if (elOffset <= currPosition && currPosition < elHeight) {
+          // Set inactive for all menus.
+          this.menus.forEach(menu => (menu.active = false))
+
+          // Set new active menu.
+          menu.active = true
+          break
+        }
+      }
+    },
+    windowResizeHandler() {
+      this.toggleNavBg()
+      this.toggleNavActive()
     },
     clickOutsideHandler(e) {
       if (this.mobileNav) {
@@ -127,8 +156,8 @@ export default {
         this.mobileNav = false
       }
     },
-    scrollToElement(selector) {
-      const target = document.querySelector(selector)
+    scrollToElement(menu) {
+      const target = document.querySelector(menu.selector)
       const navHeight = this.$el.clientHeight
 
       window.scroll({
@@ -177,6 +206,14 @@ export default {
       width: 100%;
       border-radius: 8px;
       background-color: var(--primary-color);
+    }
+
+    &.active {
+      margin-top: 4px;
+
+      &::after {
+        display: block;
+      }
     }
 
     &:hover {
