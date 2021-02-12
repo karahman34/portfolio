@@ -203,6 +203,16 @@ export default {
           require('@/assets/images/projects/news/nine.png'),
           require('@/assets/images/projects/news/ten.png')
         ]
+      },
+      {
+        title: 'Todo List',
+        tags: ['vue', 'electron js', 'tailwind'],
+        link: 'https://github.com/karahman34/todo-list-vlectron',
+        images: [
+          require('@/assets/images/projects/todo-list/one.png'),
+          require('@/assets/images/projects/todo-list/two.png'),
+          require('@/assets/images/projects/todo-list/three.png')
+        ]
       }
     ].sort(() => Math.random() - 0.5)
   },
