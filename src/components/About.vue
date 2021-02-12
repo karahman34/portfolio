@@ -5,7 +5,7 @@
     >
       <!-- About Me -->
       <div
-        class="lg:w-1/2"
+        class="mx-auto lg:w-1/2"
         data-aos="fade-right"
         data-aos-delay="100"
         data-aos-once="true"
@@ -13,22 +13,26 @@
       >
         <div class="header-context">About Me</div>
 
-        <!-- Avatar -->
-        <img class="avatar mx-auto" src="@/assets/images/avatar.jpeg" />
+        <div class="flex flex-col space-y-3 items-center space-x-5 md:flex-row">
+          <!-- Avatar -->
+          <img
+            class="flex-shrink-0 avatar mx-auto"
+            src="@/assets/images/avatar.jpeg"
+          />
 
-        <!-- Greeting -->
-        <div
-          class="mt-2 italic md:text-lg text-gray-700 font-medium break-words"
-        >
-          My name is <b>Jaka Rahman Hidayat</b>, a man who always puts
-          simplicity on top of everything.Living in Bandung, Indonesia and start
-          to play computer since the high school and fall in love since that.
+          <!-- Greeting -->
+          <div class="md:text-lg text-gray-800 font-medium break-words">
+            My name is <b>Jaka Rahman Hidayat</b>, a man who always puts
+            simplicity on top of everything.Living in Bandung, Indonesia and
+            start to play computer since the high school and fall in love since
+            that.
+          </div>
         </div>
       </div>
 
       <!-- Education -->
       <div
-        class="lg:w-1/2"
+        class="mx-auto lg:w-1/2"
         data-aos="fade-left"
         data-aos-delay="100"
         data-aos-once="true"
@@ -61,8 +65,8 @@ export default {
   height: 135px;
   border-radius: 50%;
   object-fit: cover;
-  filter: grayscale(55%);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  filter: grayscale(50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 
   @media screen and (min-width: 640px) {
     & {
