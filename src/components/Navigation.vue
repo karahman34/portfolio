@@ -169,9 +169,23 @@ export default {
     }
   }
 
-  .menu-item:hover {
-    margin-top: 3px;
-    border-bottom: 3px solid var(--primary-color);
+  .menu-item {
+    &::after {
+      content: '';
+      display: none;
+      height: 4px;
+      width: 100%;
+      border-radius: 8px;
+      background-color: var(--primary-color);
+    }
+
+    &:hover {
+      margin-top: 4px;
+
+      &::after {
+        display: block;
+      }
+    }
   }
 
   .mobile-menu {
