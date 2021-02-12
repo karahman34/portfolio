@@ -21,7 +21,7 @@
           >
             <!-- Screenshot -->
             <img
-              class="screenshot object-cover w-full cursor-pointer"
+              class="screenshot object-cover w-full"
               :src="project.images[0]"
               @click="emitShowScreenshotsEvent(project.images)"
             />
@@ -279,6 +279,9 @@ export default {
     }
 
     .screenshot {
+      cursor: -moz-zoom-in;
+      cursor: -webkit-zoom-in;
+      cursor: zoom-in;
       min-height: 200px;
       max-height: 220px;
     }
