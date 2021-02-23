@@ -213,6 +213,18 @@ export default {
           require('@/assets/images/projects/todo-list/two.png'),
           require('@/assets/images/projects/todo-list/three.png')
         ]
+      },
+      {
+        title: 'Chat App',
+        tags: ['laravel', 'vue', 'tailwind'],
+        link: 'https://github.com/karahman34/chat-frontend',
+        images: [
+          require('@/assets/images/projects/chat-app/one.png'),
+          require('@/assets/images/projects/chat-app/two.png'),
+          require('@/assets/images/projects/chat-app/three.png'),
+          require('@/assets/images/projects/chat-app/four.png'),
+          require('@/assets/images/projects/chat-app/five.png')
+        ]
       }
     ].sort(() => Math.random() - 0.5)
   },
