@@ -1,5 +1,5 @@
 <template>
-  <div id="about" class="background-gray py-6">
+  <div id="about" class="background-gray pt-6 pb-9">
     <div
       class="container overflow-x-hidden flex items-center flex-col gap-5 md:overflow-x-visible lg:flex-row lg:justify-center lg:items-start"
     >
