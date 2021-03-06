@@ -225,6 +225,23 @@ export default {
           require('@/assets/images/projects/chat-app/four.png'),
           require('@/assets/images/projects/chat-app/five.png')
         ]
+      },
+      {
+        title: 'Directories',
+        tags: ['laravel', 'vue', 'vuetify'],
+        link: 'https://github.com/karahman34/directories-frontend',
+        images: [
+          require('@/assets/images/projects/directories/one.png'),
+          require('@/assets/images/projects/directories/two.png'),
+          require('@/assets/images/projects/directories/three.png'),
+          require('@/assets/images/projects/directories/four.png'),
+          require('@/assets/images/projects/directories/five.png'),
+          require('@/assets/images/projects/directories/six.png'),
+          require('@/assets/images/projects/directories/seven.png'),
+          require('@/assets/images/projects/directories/eight.png'),
+          require('@/assets/images/projects/directories/nine.png'),
+          require('@/assets/images/projects/directories/ten.png')
+        ]
       }
     ].sort(() => Math.random() - 0.5)
   },
