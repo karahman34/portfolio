@@ -240,7 +240,9 @@ export default {
           require('@/assets/images/projects/directories/seven.png'),
           require('@/assets/images/projects/directories/eight.png'),
           require('@/assets/images/projects/directories/nine.png'),
-          require('@/assets/images/projects/directories/ten.png')
+          require('@/assets/images/projects/directories/ten.png'),
+          require('@/assets/images/projects/directories/eleven.png'),
+          require('@/assets/images/projects/directories/twelve.png')
         ]
       }
     ].sort(() => Math.random() - 0.5)
