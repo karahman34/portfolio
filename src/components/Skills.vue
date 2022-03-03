@@ -39,24 +39,28 @@ export default {
           text: 'CSS3'
         },
         {
-          icon: 'mdi mdi-language-javascript hover:text-yellow-300',
-          text: 'Javascript'
+          icon: 'mdi mdi-database hover:text-yellow-400',
+          text: 'SQL'
         },
         {
           icon: 'mdi mdi-language-php hover:text-blue-500',
           text: 'PHP'
         },
         {
-          icon: 'mdi mdi-database hover:text-yellow-400',
-          text: 'SQL'
-        },
-        {
-          icon: 'mdi mdi-laravel hover:text-red-500',
-          text: 'Laravel'
+          icon: 'mdi mdi-language-javascript hover:text-yellow-300',
+          text: 'Javascript'
         },
         {
           icon: 'mdi mdi-vuejs hover:text-green-500',
           text: 'Vue'
+        },
+        {
+          icon: 'mdi mdi-react hover:text-blue-400',
+          text: 'React'
+        },
+        {
+          icon: 'mdi mdi-laravel hover:text-red-500',
+          text: 'Laravel'
         },
         {
           icon: 'mdi mdi-sass hover:text-pink-500',
@@ -75,15 +79,11 @@ export default {
           text: 'Bootstrap'
         },
         {
-          icon: 'mdi mdi-bulma hover:text-green-300',
-          text: 'Bulma'
-        },
-        {
           icon: 'mdi mdi-tailwind hover:text-blue-400',
           text: 'Tailwind'
         },
         {
-          icon: 'mdi mdi-nodejs hover:text-green-400',
+          icon: 'mdi mdi-nodejs hover:text-green-500',
           text: 'Node JS'
         }
       ]
