@@ -94,7 +94,7 @@ export default {
           setTimeout(() => {
             this.$refs.showContactBtn.classList.remove('animate-bounce')
             this.playBounceAnimation()
-          }, 7000)
+          }, 5000)
         )
       }, 5000)
     }
