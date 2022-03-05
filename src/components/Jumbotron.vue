@@ -82,6 +82,8 @@ export default {
 
   methods: {
     emitShowContactEvent() {
+      this.$refs.showContactBtn.classList.remove('animate-bounce')
+
       return this.$emit('show-contact')
     },
     playBounceAnimation() {
