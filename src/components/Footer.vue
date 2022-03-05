@@ -1,7 +1,7 @@
 <template>
   <footer id="app-footer" class="background-particles">
     <div class="container text-center text-white">
-      2021 | Created by
+      2022 | Created by
       <span class="text-green-300">Jaka Rahman Hidayat</span>
     </div>
   </footer>
