@@ -1,8 +1,5 @@
 # portfolio
 
-## Live
-https://karahman34.github.io/portfolio/
-
 ## Project setup
 ```
 yarn install
